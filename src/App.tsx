@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import ConfirmationPage from "./Components/ConfirmationPage/ConfirmationPage";
+import Home from "./Components/Home/Home";
 
 interface Props {}
 
@@ -11,7 +12,10 @@ const App: React.FC<Props> = (props) => {
     <div>
       <Router>
         <Switch>
-          <Route exact path="/confirmation">
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/dialog">
             <ConfirmationPage
               open={isDialogOpen}
               onClose={setisDialogOpen}
