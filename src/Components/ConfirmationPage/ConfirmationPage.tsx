@@ -1,4 +1,4 @@
-import React, { Fragment, ReactElement, useState } from "react";
+import React, { Fragment, ReactElement } from "react";
 import { Transition, Dialog } from "@headlessui/react";
 import { ExclamationIcon, XIcon } from "@heroicons/react/outline";
 import Button from "./Button";
@@ -58,7 +58,7 @@ const ConfirmationPage: React.FC<Props> = ({
               leaveTo="-translate-y-36 opacity-0"
             >
               <div className="z-20 h-80">
-                <div className="inline-block w-full max-w-md p-8 my-8 overflow-hidden text-center align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+                <div className="inline-block max-w-md p-8 my-8 text-center align-middle transition-all transform bg-white rounded-lg shadow-lg">
                   <XIcon
                     className="absolute right-0 h-5 mr-3 font-bold cursor-pointer"
                     onClick={closing}

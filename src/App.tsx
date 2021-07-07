@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ConfirmationPage from "./Components/ConfirmationPage/ConfirmationPage";
 import Home from "./Components/Home/Home";
 
@@ -29,6 +29,9 @@ const App: React.FC<Props> = (props) => {
                 consectetur adipisicing elit. Corporis, molestiae!
               </p>
             </ConfirmationPage>
+          </Route>
+          <Route path="*">
+            <div>Page Not Found</div>
           </Route>
         </Switch>
       </Router>
