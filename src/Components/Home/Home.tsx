@@ -1,16 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-interface Props {}
+interface Props {
+  title: string;
+  path: string;
+}
 
-const Home: React.FC<Props> = (props) => {
+const Home: React.FC<Props> = ({ path, title }) => {
   return (
-    <div className="mt-20 text-center">
+    <div className="mt-10 text-center">
       <Link
-        className="text-2xl font-bold text-blue-600 hover:underline"
-        to="/dialog"
+        className="text-xl font-bold text-blue-600 hover:underline"
+        to={path}
       >
-        Confirmation Dialog Page
+        {title}
       </Link>
     </div>
   );

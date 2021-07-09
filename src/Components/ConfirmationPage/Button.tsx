@@ -1,22 +1,24 @@
 import React from "react";
 
 interface Props {
-  close: () => void;
+  clickFunction: () => void;
   buttonText: string;
   className?: string;
 }
 
-const Button: React.FC<Props> = ({ close, buttonText, className }) => {
+const Button: React.FC<Props> = ({ clickFunction, buttonText, className }) => {
   return (
     <button
-      className={`px-10 py-3 text-sm focus:outline-none text-white border rounded-md  ${className}`}
-      onClick={close}
+      className={`px-10 py-3 text-sm focus:outline-none border rounded-md  ${className}`}
+      onClick={clickFunction}
     >
       {buttonText}
     </button>
   );
 };
 
-Button.defaultProps = {};
+Button.defaultProps = {
+  className: "text-black bg-green-500",
+};
 
 export default React.memo(Button);

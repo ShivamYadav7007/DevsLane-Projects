@@ -81,13 +81,13 @@ const ConfirmationPage: React.FC<Props> = ({
                   <div className="mt-10 text-center">
                     <Button
                       buttonText={buttonText1}
-                      close={closing}
-                      className="bg-gray-500 hover:bg-gray-600"
+                      clickFunction={closing}
+                      className="text-white bg-gray-500 hover:bg-gray-600"
                     />
                     <Button
                       buttonText={buttonText2}
-                      close={closing}
-                      className="ml-5 bg-red-500 hover:bg-red-600"
+                      clickFunction={closing}
+                      className="ml-5 text-white bg-red-500 hover:bg-red-600"
                     />
                   </div>
                 </div>

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ConfirmationPage from "./Components/ConfirmationPage/ConfirmationPage";
 import Home from "./Components/Home/Home";
+import User from "./Components/UserDataUsingAPI/User";
 
 interface Props {}
 
@@ -13,7 +14,11 @@ const App: React.FC<Props> = (props) => {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Home />
+            <div className="mt-5 text-2xl font-bold text-center text-red-500">
+              Devslane HomeWork Directions (click to route)
+            </div>
+            <Home title="Confirmation Dialog Page" path="/dialog" />
+            <Home title="User Data using RandomUser API" path="/userdata" />
           </Route>
           <Route exact path="/dialog">
             <ConfirmationPage
@@ -29,6 +34,9 @@ const App: React.FC<Props> = (props) => {
                 consectetur adipisicing elit. Corporis, molestiae!
               </p>
             </ConfirmationPage>
+          </Route>
+          <Route exact path="/userdata">
+            <User />
           </Route>
           <Route path="*">
             <div>Page Not Found</div>
